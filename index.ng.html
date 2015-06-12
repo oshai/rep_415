@@ -1,0 +1,14 @@
+<meteor-include src="loginButtons"></meteor-include>
+<div ng-controller="PartiesListCtrl">
+    <div class="badge" ng-if="$root.currentUser">{{userScore()}}</div>
+    <br/>
+    <button ng-click="updateScore()">update score</button>
+    <br/>
+    List:
+    <ul>
+        <li ng-repeat="user in userinfo">
+            {{user.user_id}}
+            <p>{{user.score}}</p>
+        </li>
+    </ul>
+</div>
